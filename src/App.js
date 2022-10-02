@@ -16,8 +16,10 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Hello CodeSandbox {count}</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h1>
+        Simple counter example which logs stale closure captured value and
+        displays correct count here -> {count}
+      </h1>
     </div>
   );
 }
