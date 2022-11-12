@@ -92,4 +92,12 @@ function WatchCount() {
 }
 ```
 
+## useCallback vs useMemo ##
 
+Both useCallback and useMemo requires a function and dependency array. The main difference is returned value. useCallback returns a function whereas useMemo returns memoized value.
+
+useCallback will return new function when its dependencies array change. For example if the component rerenders due to the new state and if the same state is used in useCallback's dependencies array, then useCallback will return function that passed inside useCallback with new reference. 
+
+useMemo will return new value when its dependencies array gets new value. For example if the component rerenders, then it will execute the function passed inside useMemo and return the value. If dependencies are same, then it won't execute the function.
+
+Watch this video https://www.youtube.com/watch?v=fyDR6qi5pM4 for good explanation.
